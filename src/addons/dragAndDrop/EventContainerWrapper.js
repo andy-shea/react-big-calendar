@@ -127,27 +127,27 @@ class EventContainerWrapper extends React.Component {
   }
 
   updateParentScroll = (parent, node) => {
-    setTimeout(() => {
-      const draggedEl = qsa(node, '.rbc-addons-dnd-drag-preview')[0]
-      if (draggedEl) {
-        if (draggedEl.offsetTop < parent.scrollTop) {
-          scrollTop(parent, Math.max(draggedEl.offsetTop, 0))
-        } else if (
-          draggedEl.offsetTop + draggedEl.offsetHeight >
-          parent.scrollTop + parent.clientHeight
-        ) {
-          scrollTop(
-            parent,
-            Math.min(
-              draggedEl.offsetTop -
-                parent.offsetHeight +
-                draggedEl.offsetHeight,
-              parent.scrollHeight
-            )
-          )
-        }
-      }
-    })
+    // setTimeout(() => {
+    //   const draggedEl = qsa(node, '.rbc-addons-dnd-drag-preview')[0]
+    //   if (draggedEl) {
+    //     if (draggedEl.offsetTop < parent.scrollTop) {
+    //       scrollTop(parent, Math.max(draggedEl.offsetTop, 0))
+    //     } else if (
+    //       draggedEl.offsetTop + draggedEl.offsetHeight >
+    //       parent.scrollTop + parent.clientHeight
+    //     ) {
+    //       scrollTop(
+    //         parent,
+    //         Math.min(
+    //           draggedEl.offsetTop -
+    //             parent.offsetHeight +
+    //             draggedEl.offsetHeight,
+    //           parent.scrollHeight
+    //         )
+    //       )
+    //     }
+    //   }
+    // })
   }
 
   _selectable = () => {
