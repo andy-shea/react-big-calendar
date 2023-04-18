@@ -81,7 +81,14 @@ function TimeGridEvent(props) {
           }
         )}
       >
-        {inner}
+        {Event ? (
+          <Event event={event} label={label} title={title} />
+        ) : (
+          <>
+            <div className="rbc-event-label">{label}</div>
+            <div className="rbc-event-content">{title}</div>
+          </>
+        )}
       </div>
     </EventWrapper>
   )
